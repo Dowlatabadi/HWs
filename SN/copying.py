@@ -101,7 +101,7 @@ def plot_dist(list_of_exps):
 
 
 m0=3
-N=5000
+N=2000
 edges=[
 (0,1),
 (1,0),
@@ -115,12 +115,6 @@ probs=[.01,.5,.95]
 for (p_index,p0) in enumerate(probs):
     exp_res=[]
     for i in range(number_of_exps):
-        edges=[
-        (0,1),
-        (1,0),
-        (1,2),
-        (2,0)
-        ]
         print(f'progress({(((p_index*number_of_exps+i)/tot)*100):0.2f}%)------------------exp num={i+1}')
         result=copying(edges,N,m=m0,p=p0)
         exp_res.append(result)
